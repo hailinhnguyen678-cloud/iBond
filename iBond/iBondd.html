@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TỐI ƯU SEO META TAGS -->
+    <title>Trái phiếu iBond - Đầu tư an toàn, sinh lời vượt trội | TCBS</title>
+    <meta name="description" content="Đầu tư trái phiếu iBond tại TCBS an toàn, lợi nhuận tới 14.5%/năm. Các gói tích lũy linh hoạt, thanh khoản cao, vốn từ 1 triệu VNĐ. Đầu tư trực tuyến ngay!">
+    
+    <!-- CSS GỘP CHUNG -->
+    <style>
+        /* Tùy chỉnh biến màu sắc theo bộ nhận diện thương hiệu TCBS */
+        :root {
+            --tcbs-red: #da251d;
+            --tcbs-red-hover: #b51d16;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --bg-light: #f4f6f8;
+            --white: #ffffff;
+            --border-color: #eaeaea;
+        }
+
+        /* Reset CSS cơ bản */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        /* --- Nút bấm (CTA) --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--tcbs-red);
+            color: var(--white);
+            border: 2px solid var(--tcbs-red);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--tcbs-red-hover);
+            border-color: var(--tcbs-red-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--tcbs-red);
+            border: 2px solid var(--tcbs-red);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--tcbs-red);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--tcbs-red);
+            border: 1px solid var(--tcbs-red);
+            padding: 8px 16px;
+            font-size: 0.95rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--tcbs-red);
+            color: var(--white);
+        }
+
+        /* --- Header --- */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            display: block;
+            /* Placeholder styling if image is missing */
+            background-color: #eee; 
+        }
+
+        /* --- Bố cục Section --- */
+        section {
+            padding: 70px 5%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 45px;
+            font-size: 2.2rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: var(--white);
+            text-align: center;
+            padding: 80px 5%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            color: var(--tcbs-red);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+
+        /* --- Lưới (Grid) cho Card --- */
+        .benefits-grid, .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Thiết kế Card tĩnh, gọn gàng --- */
+        .benefit-card, .package-card {
+            background-color: var(--white);
+            padding: 35px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .benefit-card img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+            object-fit: contain;
+            /* Placeholder styling if image is missing */
+            background-color: #f9f9f9; 
+            border-radius: 50%;
+        }
+
+        .benefit-card h3, .package-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .benefit-card p, .package-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- Bottom CTA Section --- */
+        .bottom-cta-section {
+            background-color: var(--tcbs-red);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .bottom-cta-section h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .bottom-cta-section p {
+            margin-bottom: 35px;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .bottom-cta-section .btn-primary {
+            background-color: var(--white);
+            color: var(--tcbs-red);
+            border-color: var(--white);
+        }
+
+        .bottom-cta-section .btn-primary:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #1a1a1a;
+            color: #a0a0a0;
+            text-align: center;
+            padding: 25px 5%;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive cho Mobile --- */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            section {
+                padding: 50px 5%;
+            }
+            .benefits-grid, .packages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER: Chứa Logo và CTA phụ -->
+    <header class="site-header">
+        <div class="logo">
+            <!-- Thẻ alt bắt buộc cho mọi hình ảnh -->
+            <img src="logo-tcbs.png" alt="Logo Techcom Securities - TCBS">
+        </div>
+        <nav class="cta-nav">
+            <a href="#" class="btn btn-outline">Mở tài khoản</a>
+        </nav>
+    </header>
+
+    <!-- MAIN: Chứa toàn bộ nội dung chính của trang -->
+    <main>
+        
+        <!-- SECTION 1: HERO BANNER (Chứa thẻ H1 duy nhất) -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Trái phiếu iBond - Đầu tư an toàn, cuộc sống an nhàn</h1>
+                <p>Giải pháp tăng trưởng vốn gốc đều đặn trong dài hạn dành riêng cho khách hàng cá nhân với nhiều tiện ích thanh khoản linh hoạt.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">Đầu tư ngay</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: LỢI ÍCH ĐẦU TƯ (Cấu trúc thẻ H2 và H3) -->
+        <section class="benefits-section">
+            <h2>Vì sao nên lựa chọn trái phiếu iBond để đầu tư?</h2>
+            
+            <div class="benefits-grid">
+                <!-- Lợi ích 1 -->
+                <article class="benefit-card">
+                    <img src="icon-an-toan.png" alt="Biểu tượng an toàn đầu tư trái phiếu iBond với TCB và TCBS">
+                    <h3>An toàn</h3>
+                    <p>Được thẩm định khắt khe bởi TCB & TCBS. Tổ chức phát hành minh bạch. Phần lớn có tài sản đảm bảo hoặc được Techcombank bảo lãnh thanh toán.</p>
+                </article>
+
+                <!-- Lợi ích 2 -->
+                <article class="benefit-card">
+                    <img src="icon-loi-nhuan.png" alt="Biểu tượng lợi nhuận cao tới 14.5% của trái phiếu iBond">
+                    <h3>Lợi nhuận cao</h3>
+                    <p>Lợi nhuận lên tới 14.5%/năm. Trả lợi tức định kỳ 3 hoặc 6 tháng/lần, tạo dòng tiền đều đặn và cơ hội sinh lãi kép.</p>
+                </article>
+
+                <!-- Lợi ích 3 -->
+                <article class="benefit-card">
+                    <img src="icon-tien-ich.png" alt="Biểu tượng tiện ích đầu tư online trên TCInvest">
+                    <h3>Tiện ích đầu tư</h3>
+                    <p>Tham gia đơn giản, giao dịch 100% online ngay tại nhà trên hệ thống TCInvest với số vốn bắt đầu chỉ từ 1 triệu VND.</p>
+                </article>
+
+                <!-- Lợi ích 4 -->
+                <article class="benefit-card">
+                    <img src="icon-thanh-khoan.png" alt="Biểu tượng thanh khoản linh hoạt của trái phiếu iBond">
+                    <h3>Thanh khoản linh hoạt</h3>
+                    <p>Dễ dàng bán lại qua dịch vụ môi giới iBond Pro, hệ thống iConnect hoặc cầm cố vay tại Techcombank khi cần tiền gấp.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CÁC GÓI SẢN PHẨM -->
+        <section class="packages-section">
+            <h2>Các gói sản phẩm Trái phiếu theo nhu cầu đầu tư</h2>
+            
+            <div class="packages-grid">
+                <!-- Gói 1 -->
+                <article class="package-card">
+                    <h3>Tích lũy bền vững</h3>
+                    <p>Dành cho khách hàng đầu tư dài hạn (trên 12 tháng), lựa chọn các trái phiếu an toàn có lãi suất hấp dẫn nhất và giữ đến đáo hạn.</p>
+                    <a href="#" class="btn btn-secondary">Tìm hiểu thêm</a>
+                </article>
+
+                <!-- Gói 2 -->
+                <article class="package-card">
+                    <h3>Dòng tiền định sẵn</h3>
+                    <p>Dành cho khách hàng đầu tư ngắn hạn, mong muốn chủ động dòng tiền phù hợp với kế hoạch chi tiêu (kỳ hạn 90, 180, 360 ngày).</p>
+                    <a href="#" class="btn btn-secondary">Tìm hiểu thêm</a>
+                </article>
+
+                <!-- Gói 3 -->
+                <article class="package-card">
+                    <h3>Đầu tư linh hoạt</h3>
+                    <p>Dành cho khách hàng năng động, có thể linh hoạt mua đi bán lại dễ dàng bất kỳ lúc nào qua hệ thống thỏa thuận iConnect.</p>
+                    <a href="#" class="btn btn-secondary">Tìm hiểu thêm</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CALL TO ACTION CUỐI TRANG -->
+        <section class="bottom-cta-section">
+            <h2>Sẵn sàng để đầu tư trái phiếu iBond?</h2>
+            <p>Mở tài khoản chứng khoán trực tuyến chỉ trong 3 phút và bắt đầu hành trình đầu tư sinh lời của bạn.</p>
+            <a href="#" class="btn btn-primary">Mở tài khoản ngay</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>Bản quyền © 2026 thuộc về Công ty Cổ phần Chứng khoán Kỹ Thương (TCBS)</p>
+    </footer>
+
+</body>
+</html>
